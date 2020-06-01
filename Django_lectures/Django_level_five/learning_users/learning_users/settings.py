@@ -28,7 +28,7 @@ SECRET_KEY = '!14da-&kwsd^l&e^#t3!6-1qrd5ca79c-k9qx2yu)+1=6#w)t&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [pratikgitpixel.pythonanywhere.com]
 
 
 # Application definition
