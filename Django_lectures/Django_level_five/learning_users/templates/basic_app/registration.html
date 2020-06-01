@@ -1,0 +1,30 @@
+{% extends 'basic_app/base.html' %}
+{% load static %}
+
+
+{% block body_block %}
+<div class="jumbotron">
+
+
+
+  {% if registered %}
+  <h1>Thank you for Registering</h1>
+
+  {% else%}
+    <h1>Register Here!</h1>
+    <h3>Fill out the form:</h3>
+
+<!-- becoz we are multimedia data that why we used enctype -->
+    <form  method="post" enctype='multipart/form-data'>
+      {% csrf_token %}
+
+      {{ user_form.as_p }}
+      {{ profile_form.as_p }}
+
+      <input class="btn btn-primary mb-2" type="submit" name="" value="Register">
+
+    </form>
+{% endif%}
+</div>
+
+{% endblock %}
